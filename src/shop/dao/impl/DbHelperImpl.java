@@ -12,7 +12,7 @@ public class DbHelperImpl implements DbHelper {
     @Override
     public PreparedStatement preparedStatement(String sql) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/shop", "postgres", "leefamforever20");
+            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/shop", "postgres", "postgres");
             return connection.prepareStatement(sql);
         } catch (SQLException throwables) {
             throw new SqlException("Произошла ошибка при входе в БД");
